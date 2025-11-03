@@ -284,7 +284,7 @@ function Library:object(class, properties)
 
 		methods.MouseEnter:connect(function()
 			hovered = true
-			wait(0.2)
+			task.wait(0.2)
 			if hovered then
 				tooltipContainer:tween{BackgroundTransparency = 0.2, TextTransparency = 0.2}
 				tooltipArrow:tween{ImageTransparency = 0.2}
@@ -355,11 +355,11 @@ function Library:show(state)
 			rawset(self.mainFrame, "oldSize", (state and self.mainFrame.oldSize) or self.mainFrame.Size)
 			self.mainFrame.ClipsDescendants = false
 		end)
-		wait(0.15)
+		task.wait(0.15)
 		self.mainFrame:fade(not state, self.mainFrame.BackgroundColor3, 0.15)
 	else		
 		self.mainFrame:fade(not state, self.mainFrame.BackgroundColor3, 0.15)
-		wait(0.1)
+		task.wait(0.1)
 		self.mainFrame:tween{Size = UDim2.new(), Length = 0.25}
 	end
 end
@@ -567,7 +567,7 @@ function Library:create(options)
 	local function closeUI()
 		core.ClipsDescendants = true
 		core:fade(true)
-		wait(0.1)
+		task.wait(0.1)
 		core:tween({Size = UDim2.new()}, function()
 			gui.AbsoluteObject:Destroy()
 		end)
@@ -1213,7 +1213,7 @@ function Library:tab(options)
 			tabButton.Visible = false
 			tab.Visible = false
 			tabButton.Parent = self.nilFolder.AbsoluteObject
-			wait()
+			task.wait()
 		end)
 
 		local visible = {}
