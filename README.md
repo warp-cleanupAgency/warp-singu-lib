@@ -1,4 +1,4 @@
-[![discord server](https://media.discordapp.net/attachments/929706675022233640/933723518321967144/banner.jpg)](https://discord.gg/jaunk8nhN5)
+
 
 # Mercury
 
@@ -26,7 +26,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/m
 
 ... more to be added.
 
-Created by [Deity#0228] and [Abstract#8007]
+
 
 ## Documentation
 
