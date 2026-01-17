@@ -1377,6 +1377,7 @@ function Library:toggle(options)
 
 	function methods:SetState(state)
 		toggled = state
+		options.State = state
 		if toggled then
 			offIcon:crossfade(onIcon, 0.1)
 		else
